@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Malicious Download Detector",
+  "description": "Detect and report potentially malicious downloads",
+  "version": "1.0",
+  "permissions": ["downloads"],
+  "host_permissions": ["http://localhost/"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "images/icons8-filter-48.png"
+  }
+}
