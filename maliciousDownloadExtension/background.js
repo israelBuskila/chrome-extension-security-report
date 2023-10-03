@@ -50,4 +50,3 @@ function handleReportResponse(response) {
 function handleReportError(error) {
   console.error("Failed to report malicious download:", error);
 }
-
