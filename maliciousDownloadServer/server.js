@@ -2,16 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+require('dotenv').config();
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect(
-  "mongodb+srv://Admin:SUp14abw5GDtq4xK@chrome-extension-data-c.8fqrw0n.mongodb.net/extensiondatabase?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 // Middleware
 app.use(bodyParser.json());

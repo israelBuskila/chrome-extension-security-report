@@ -1,0 +1,11 @@
+version: '3'  # You can adjust the version as needed
+
+services:
+  nodejs-server:
+    build:
+      context: ./maliciousDownloadServer # Path to your Node.js server code
+    container_name: nodejs-server
+    ports:
+      - "3000:3000"  # Map port 3000 in the container to the host
+    env_file:
+      - .env  # Include the .env file
